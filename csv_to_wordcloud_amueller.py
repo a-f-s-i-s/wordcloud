@@ -45,7 +45,6 @@ for row in reader:
             if isfloat(col):
                 col = float(col)
             r.append(col)
-        print r
         if c_count != num_columns:
             print "Warning: Line #%d has only %d columns. Ignoring it." % (line_count, c_count)
             continue
@@ -63,7 +62,6 @@ if not all(map(lambda x: x == num_columns,map(len,table))):
 
 # TRANSPOSE
 table_t = map(list,zip(*table))
-
 
 # GENERATE WORDCLOUDS
 # columns

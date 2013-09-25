@@ -1,18 +1,15 @@
 #!/usr/bin/env python
-# MODULES
 import sys, csv, os
 from pytagcloud import create_tag_image, make_tags
 
 # PARAMETERS
 csv_dataset_path = "data/et_deficiency_prop.csv"
-width = 900
+width = 800
 height = 600
 ext = ".png"
-
 font_name = "IM Fell DW Pica"
 # font_name = "Neuton"
 # font_name = "Cuprum"
-# font_name = "Yanone Kaffeesatz"
 output_dir_cols = "pytagcloud/chemicals/"
 output_dir_rows = "pytagcloud/woredas/"
 
@@ -22,16 +19,15 @@ for d in [output_dir_cols, output_dir_rows]:
 # UTILITY FUNCTIONS
 def isfloat(x):
     try:
-        a = float(x)
+        float(x)
     except ValueError:
         return False
     else:
         return True
 
-# READ CSV:
+# READ CSV
 ifile  = open(csv_dataset_path, "r")
 reader = csv.reader(ifile)
-
 table = []
 num_columns = -1
 r_count = 0
