@@ -1,6 +1,4 @@
 #!/usr/bin/env python
-# W.Wu, 8/7/2013
-
 import sys, csv
 import numpy as np
 sys.path.insert(0, 'amueller_word_cloud')

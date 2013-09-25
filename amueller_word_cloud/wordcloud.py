@@ -12,8 +12,8 @@ from PIL import ImageFont
 import numpy as np
 from query_integral_image import query_integral_image
 
-FONT_PATH = "/usr/share/fonts/truetype/droid/DroidSansMono.ttf"
-
+# FONT_PATH = "/usr/share/fonts/truetype/droid/DroidSansMono.ttf"
+FONT_PATH = "/Library/Fonts/Palatino.ttc"
 
 def make_wordcloud(words, counts, fname, font_path=None, width=400, height=200,
                    margin=5, ranks_only=False):
@@ -146,10 +146,9 @@ def make_wordcloud(words, counts, fname, font_path=None, width=400, height=200,
                                                    orientation=orientation)
         draw.setfont(transposed_font)
         draw.text((position[1], position[0]), word,
-                  fill="hsl(%d" % random.randint(0, 255) + ", 80%, 50%)")
-    img.show()
+                  fill="hsl(%d" % random.randint(0, 255) + ", 80%, 30%)")
+    # img.show()
     img.save(fname)
-
 
 if __name__ == "__main__":
 

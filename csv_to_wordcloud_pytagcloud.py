@@ -1,6 +1,4 @@
 #!/usr/bin/env python
-# W.Wu, 8/7/2013
-
 # MODULES
 import sys, csv
 from pytagcloud import create_tag_image, make_tags
