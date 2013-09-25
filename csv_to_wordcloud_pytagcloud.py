@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # MODULES
-import sys, csv
+import sys, csv, os
 from pytagcloud import create_tag_image, make_tags
 
 # PARAMETERS
@@ -9,12 +9,15 @@ width = 900
 height = 600
 ext = ".png"
 
-# font_name = "Cuprum"
 font_name = "IM Fell DW Pica"
 # font_name = "Neuton"
+# font_name = "Cuprum"
 # font_name = "Yanone Kaffeesatz"
 output_dir_cols = "pytagcloud/chemicals/"
 output_dir_rows = "pytagcloud/woredas/"
+
+for d in [output_dir_cols, output_dir_rows]:
+    if not os.path.exists(d): os.makedirs(d)
 
 # UTILITY FUNCTIONS
 def isfloat(x):

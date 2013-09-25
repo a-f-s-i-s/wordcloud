@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import sys, csv
+import sys, csv, os
 import numpy as np
 sys.path.insert(0, 'amueller_word_cloud')
 import wordcloud
@@ -12,6 +12,9 @@ ext = ".png"
 font_path = "/Library/Fonts/Palatino.ttc"
 output_dir_cols = "amueller/chemicals/"
 output_dir_rows = "amueller/woredas/"
+
+for d in [output_dir_cols, output_dir_rows]:
+    if not os.path.exists(d): os.makedirs(d)
 
 # UTILITY FUNCTIONS
 def isfloat(x):
